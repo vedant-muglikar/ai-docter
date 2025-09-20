@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React, { useState } from "react";
+import AddNewSessionDialog from "./AddNewSessionDialog";
 
 const HIstoryList = () => {
   const [historyList, setHistoryList] = useState([]);
@@ -18,7 +19,7 @@ const HIstoryList = () => {
           />
           <h2 className="font-bold text-xl mt-2">No Recent Consultation</h2>
           <p>It looks like you haven't consulted with any doctors yet.</p>
-          <Button className="mt-3">+ Start a Consultation</Button>
+          <AddNewSessionDialog />
         </div>
       ) : (
         <div>List</div>
